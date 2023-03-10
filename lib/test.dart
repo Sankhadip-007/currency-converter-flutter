@@ -36,8 +36,8 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
 
   Future<Map<String, dynamic>> fetchExchangeRates() async {
     amount=fromTextController.text;
-    var url = 'https://api.apilayer.com/exchangerates_data/convert?to=$toCurrency&from=$fromCurrency&amount=$amount';
-    var apikey = 'n8zvPRU9FKOdAuJPMllz6UnUOC0qibOX';
+    var url = 'https://yourAPIurl/convert?to=$toCurrency&from=$fromCurrency&amount=$amount';
+    var apikey = 'your api key';
     loading();
     var response = await http.get(Uri.parse(url), headers: {'apikey': apikey});
     if (response.statusCode == 200) {
